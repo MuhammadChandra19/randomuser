@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, Method } from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosRequestHeaders, Method } from 'axios';
 
 export class BaseAPI {
   private baseURL: string
@@ -7,7 +7,7 @@ export class BaseAPI {
 
   constructor(path: string) {
     this.path = path
-    this.baseURL = process.env.API_URL || ''
+    this.baseURL = 'https://randomuser.me/'
     this.axiosInstance = axios.create()
 
     this.axiosInstance.interceptors.response.use(
@@ -21,9 +21,9 @@ export class BaseAPI {
     url: string, 
     data: any = {}, 
     addtionalConfig = {},
-    headers: object = {}
+    headers: AxiosRequestHeaders = {}
   ): Promise<T> {
-    let header: object = {
+    let header: AxiosRequestHeaders = {
       "Content-Type": "application/json"
     };
 

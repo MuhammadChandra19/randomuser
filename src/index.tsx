@@ -1,4 +1,6 @@
-import * as React from 'react'
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom"
+import './styles/index.css'
+import Main from './views/main'
 
-ReactDOM.render(<div>hallo</div>, document.getElementById("root"))
+
+ReactDOM.render(<Main />, document.getElementById("root"))
