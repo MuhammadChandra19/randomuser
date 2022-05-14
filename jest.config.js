@@ -19,7 +19,7 @@ module.exports = {
     "@testing-library/jest-dom/extend-expect"
   ],
   moduleNameMapper: {
-    "@app/(.*)": "<rootDir>/src/$1",
+    // "@app/(.*)": "<rootDir>/src/$1",
     "\\.(css|less|scss)$": "identity-obj-proxy"
   },
 

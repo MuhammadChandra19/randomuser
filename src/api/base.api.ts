@@ -39,8 +39,6 @@ export class BaseAPI {
       ...addtionalConfig
     };
 
-    console.log(config)
-
     if (method === "GET") {
       Object.keys(data).forEach(key => {
         if ((data[key] === null || data[key] === "")) {

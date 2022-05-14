@@ -13,7 +13,7 @@ export type FetchParams = {
   gender?: string
 }
 
-export default class UserAPI extends BaseAPI {
+class UserAPI extends BaseAPI {
   constructor() {
     super('/api')
   }
@@ -22,3 +22,5 @@ export default class UserAPI extends BaseAPI {
     return this.makeRequest('GET', '', params)
   }
 }
+
+export const userAPI = new UserAPI()
