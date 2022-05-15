@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'https://muhammadchandra19.github.io/randomuser/bundle.js'),
         filename: 'bundle.js',
     },
     module: {
@@ -38,7 +38,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, './build/index.html'),
         }),
         new CleanWebpackPlugin(),
     ],
