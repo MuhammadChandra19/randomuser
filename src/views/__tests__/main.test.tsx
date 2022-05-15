@@ -28,7 +28,7 @@ afterEach(cleanup)
 describe('Should render correctly', () => {
   test('Should load user correctly', async () => {
     userAPI.getUserList = jest.fn().mockResolvedValue(userList)
-    const { getByTestId, debug, getByText, container } = render(<MainApp />, {})
+    const { getByTestId } = render(<MainApp />, {})
 
     await waitFor(() => {
       expect(userAPI.getUserList).toHaveBeenLastCalledWith({ page : 1, pageSize: 10, results: 10 })
