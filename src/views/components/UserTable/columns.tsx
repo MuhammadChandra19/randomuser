@@ -27,7 +27,7 @@ export const generateColumn = ({}): ColumnProps<User>[] => ([
   {
     title: 'Registered Date',
     dataIndex: 'registered',
-    render: (_, data) => <div>{ data.registered.date }</div>,
+    render: (_, data) => <div>{ new Date(data.registered.date).toLocaleString() }</div>,
     sorter: true
   },
 ])

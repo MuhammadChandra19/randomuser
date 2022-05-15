@@ -2,13 +2,16 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+const publicPath =  process.argv.indexOf('-p') >= 0 ? 'https://MuhammadChandra19.github.io/randomuser/' : '/'
+
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: 'https://MuhammadChandra19.github.io/randomuser/',
+        publicPath,
         filename: 'bundle.js',
     },
+    mode: 'development',
     module: {
         rules: [
             {
