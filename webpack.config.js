@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-const publicPath =  process.env === 'production' ? 'https://MuhammadChandra19.github.io/randomuser/' : '/'
+const publicPath =  process.argv.indexOf('env=production') >= 0 ? 'https://MuhammadChandra19.github.io/randomuser/' : '/'
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
