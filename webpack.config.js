@@ -5,7 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
-        path: path.resolve(__dirname, 'https://muhammadchandra19.github.io/randomuser/bundle.js'),
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'https://MuhammadChandra19.github.io/randomuser/',
         filename: 'bundle.js',
     },
     module: {
