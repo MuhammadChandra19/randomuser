@@ -33,7 +33,7 @@ Run dev server
 
 ## References
 #### 1. API
-This folder stores all HTTP requests to **backend**. You can call `baseApi` function and use the `makeRequest` 
+This folder stores all HTTP requests to **backend**. You extends `BaseAPI` class and use the `makeRequest` 
 
 ```
 makeRequest(url);
@@ -54,7 +54,7 @@ class YourAPI extends BaseAPI {
 export const yourAPI = new YourAPI()
 ```
 
-#### 7. utils
+#### 2. utils
 Utils folder contains helper methods.
 A helper method is a method that helps another method to perform it's task. These are typically used when a method has to perform a complicated task that is composed of several smaller tasks. The smaller tasks are often performed by helper methods.
 
